@@ -18,7 +18,11 @@ nav{
 }
 
 ul {
-	/*margin-left: 0;*/
+	color: white;
+}
+
+dt{
+	font-style: oblique;
 }
 
 li {
@@ -28,7 +32,7 @@ li {
 }
 
 h2, p, h3{
-	color:darkolivegreen;
+	color:saddlebrown;
 }
 
 .posttime {
