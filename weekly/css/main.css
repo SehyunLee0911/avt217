@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1, h2, h3, h4{
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color:ghostwhite;
+}
+
+h1, h2, h3 {
+	margin-left: 5%;
+}
+
+h4{
+	text-decoration: underline;
+}
+
+body{
+	background-color: dimgrey;
+}
+
+dt{
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.85em;
+  color:ghostwhite;
+}
+
+#wrapper{
+	margin-left: 10%;
+}
+
+dd{
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.2em;
+  color:ghostwhite;
+}
+
+a:link {
+	color:#a8e2ff;
+	text-decoration: none;
+}
+
+a:visited {
+	color:#e4c4ff;
+}
+
+a:hover {
+	color:dodgerblue;
+	text-decoration:underline;
+}
+
+a:active {
+	color:burlywood;
+}
+
+.weekly{
+	width:45%;
+	float:left;
+	margin: 0 5%;
+}
+
+#project {
+	width:45%;
+	float:left;
+}
+
+.demo {
+	font-weight: 400;
+	font-style: italic;
+	color: palegoldenrod;
+	font-size: 0.7em;
+}
