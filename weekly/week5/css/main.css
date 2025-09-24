@@ -32,8 +32,9 @@ body{
   transition: 0.3s;
   font-size: 15px;
   text-align: center;
-  font-family: "Permanent Marker", cursive;
-  font-weight: 400;
+  font-family: "Newsreader", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
   font-style: normal;
   color: ghostwhite;
 }
@@ -65,31 +66,34 @@ body{
 }
 
 h1 {
-  font-family: "Permanent Marker", cursive;
-  font-weight: 400;
-  font-style: normal;
+  font-family: "Newsreader", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: bold;
   color:#232323;
   text-decoration: underline;
 }
 
 .subtitle {
-  font-family: "Permanent Marker", cursive;
+  font-family: "Newsreader", serif;
+  font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  color: #4b4b4b;
+  color: black;
 }
 
 h3, h4 {
-  font-family: "Permanent Marker", cursive;
-  font-weight: 400;
+  font-family: "Newsreader", serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
   font-style: normal;
-  color:#4b4b4b;
+  color:black;
 }
 
 p {
   font-family: "Enriqueta", serif;
   font-weight: 400;
   font-style: italic;
-  color: #6e6e6e;
+  color: black;
   font-size: 0.9em;
 }
