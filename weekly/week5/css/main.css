@@ -1,0 +1,95 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+.author {
+  color: blue;
+  font-size: 0.65em;
+}
+
+body{
+	margin-left: 15%;
+	margin-right: 15%;
+	background-color: #ececec;
+}
+
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #333333;
+}
+
+.tab button {
+  display: block;
+  width: 25%;
+  box-sizing: border-box;
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 15px;
+  text-align: center;
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: ghostwhite;
+}
+
+.tab button:hover {
+ background-color: #111111;
+}
+
+.tab button.active {
+ background-color: #111112;
+}
+
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  color:ghostwhite;
+  background-color: #707578;
+}
+
+.tabcontent p {
+	color: ghostwhite;
+	font-size: 0.85em;
+}
+
+.tabcontent h3 {
+	color:ghostwhite;
+}
+
+h1 {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color:#232323;
+  text-decoration: underline;
+}
+
+.subtitle {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: #4b4b4b;
+}
+
+h3, h4 {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color:#4b4b4b;
+}
+
+p {
+  font-family: "Enriqueta", serif;
+  font-weight: 400;
+  font-style: italic;
+  color: #6e6e6e;
+  font-size: 0.9em;
+}
