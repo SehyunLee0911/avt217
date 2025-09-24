@@ -79,16 +79,17 @@ h1 {
 .subtitle {
   font-family: "Newsreader", serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 300;
   font-style: italic;
   color: black;
+  margin-bottom: 3%;
 }
 
 h3, h4 {
   font-family: "Newsreader", serif;
   font-optical-sizing: auto;
   font-weight: 600;
-  font-style: normal;
+  font-style: bold;
   font-size: 1.1em;
   color:black;
 }
