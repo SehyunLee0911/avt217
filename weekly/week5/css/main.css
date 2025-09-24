@@ -4,7 +4,9 @@
 
 .author {
   color: blue;
-  font-size: 0.65em;
+  font-size: 0.75em;
+  float: right;	
+  clear:both;
 }
 
 body{
@@ -78,7 +80,7 @@ h1 {
   font-family: "Newsreader", serif;
   font-optical-sizing: auto;
   font-weight: 400;
-  font-style: normal;
+  font-style: italic;
   color: black;
 }
 
@@ -87,6 +89,7 @@ h3, h4 {
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+  font-size: 1.1em;
   color:black;
 }
 
