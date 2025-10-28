@@ -1,0 +1,63 @@
+@charset "UTF-8";
+/* CSS Document */
+  body {
+    text-align: center;
+    background:url("../img/MOF Merry Christmas 2007.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+#container {
+	margin-top: 40vh;
+	margin-left: 0vw;
+  }
+
+  p {
+	font-family: "Luckiest Guy", cursive;
+  	font-weight: 400;
+  	font-style: normal;
+    text-transform:uppercase;
+	font-size: 72px;	
+	color: white;
+	
+  }
+ 
+.desktop-only{
+	text-shadow: -2px 0 #ea00d9, 0 2px #ea00d9, 2px 0 #ea00d9, 0 -2px #ea00d9;
+}
+
+/* tell browser don't display it when screen is wider than 768px */
+  .mobile-only {
+	text-shadow: -2px 0 #ea00d9, 0 2px #ea00d9, 2px 0 #ea00d9, 0 -2px #ea00d9;
+    display: none;
+  }
+
+/* tell browser to do the followings when screen is at and narrower than 768px */
+  @media only screen and (max-width: 768px) {
+	  
+    body {
+ 	background-image: none;
+    }
+	  
+	#container {
+ 		margin-top: 20vh;
+    }
+	   
+    p {
+		text-transform: none;
+    }
+	  
+	#cursive {
+  	}
+	  
+    .mobile-only {
+   	display:block;
+    }
+	  /* Now the style and content for desktop will not be displied */
+    .desktop-only {
+	display:none;
+    }
+
+} /* don't forget to close the styles for mobile/

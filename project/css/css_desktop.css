@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin: 0; padding: 0;}
+
+
+body {
+	background-color: #001533;	
+}
+
+.title {
+	position: fixed;
+	width: 1533px;
+	height: 81px;	
+	padding: 0 0 0 0;
+	background-color: #001d48;
+	border: 0px solid #001d48;
+	z-index: 19;
+}
+
+.tb_1, .tb_2, .tb_3, .tb_4 {
+	background-color: #001d48;
+	color: white;
+	border: 0px solid #001d48;
+	width:350px;
+	height: 81px;
+	font-size: 32px;
+	font-family:"Times New Roman";
+	font-style: bold;
+	text-transform: uppercase;
+}
+
+.logo {
+	position: relative;
+	width: 108px; height: 108px;
+	left: 45%;
+	top: -120%;
+	z-index: 20;
+}
+
+.box_a, .box_b {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.tb_1:hover, .tb_2:hover, .tb_3:hover, .tb_4:hover{
+	background-color: #001d48;
+	color: red;
+	border: 2px solid #001d48;
+}
+
+.wte_1 {
+	border: 0px;
+	width: 800px;
+	height: 480px;
+	object-fit: cover;
+}
+
+.upcoming {
+	position: relative;
+	left: 40px;
+	top: 90px;
+	font-size: 36px;
+	color: white;
+}
+
+h4 {
+	padding-bottom: 10px;
+}	
+
+.wte_2 {
+	
+}
