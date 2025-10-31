@@ -8,15 +8,15 @@
 </head>
 
 <body>
-	<div class = "title"> 
+	<div class = "title"> 	
 		<div class = "box_a">
-			<button class = "tb_1">Home</button>
-		<button class = "tb_2">Artists</button>
+			<button class = "tb_1"><a href = "homepage_desktop.html">Home</a></button>
+		<button class = "tb_2"><a href = "artist_desktop.html">Artists</a></button>
 		</div>
 	<img class = "logo" src = "img/transparent-logo.png" alt = "logo">
 		<div class = "box_b">
-		<button class = "tb_3">Menu</button>
-		<button class = "tb_4">Location</button>		
+		<button class = "tb_3"><a href = "menu_desktop.html">Menu</a></button>
+		<button class = "tb_4"><a href = "location_desktop.html">Location</a></button>		
 		</div>
 	</div>
 	
@@ -51,7 +51,7 @@
 		</div>
 	</div> 
 	
-	<audio controls id = "audio-player" preload="auto" autoplay playsinline></audio>
+	<audio id="audio-player" preload="auto" autoplay muted playsinline></audio>
 	<div id = "controls">
 	<div id="song-title"></div>
 	<div class = "controls-row">
@@ -71,9 +71,10 @@
 	
 	<script>
 	const playlist = [
+	  { src: "mp3/Wave_To_Earth.mp3", title: "wave to earth - love" },
       { src: "mp3/Nerd Connection.mp3", title: "Nerd Connection - Back In Time" },
       { src: "mp3/Hanroro.mp3", title: "Hanroro - Landing In Love" },
-      { src: "mp3/Jannabi.mp3", title: "Jannabi - For Lovers Who Hesitate" },
+      { src: "	mp3/Jannabi.mp3", title: "Jannabi - For Lovers Who Hesitate" },
 	  { src: "mp3/YDBB.mp3", title: "YDBB - Isn't That Good" },
     ]; 
 		
@@ -98,9 +99,15 @@
 }
 loadTrack(0);
 		
-
+audio.play().then(() => {
+  playPauseBtn.classList.add('pause');
+}).catch(() => {
+  console.log('Autoplay blocked; click play.');
+});
+		
 function togglePlayPause() {
   if (audio.paused) {
+	audio.muted = false;  
     audio.play();
     playPauseBtn.classList.add('pause'); 
   } else {

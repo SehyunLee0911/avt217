@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Artists</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/css_desktop.css">
+</head>
+
+<body>
+	<div class = "title"> 	
+		<div class = "box_a">
+			<button class = "tb_1"><a href = "homepage_desktop.html">Home</a></button>
+		<button class = "tb_2"><a href = "artist_desktop.html">Artists</a></button>
+		</div>
+	<img class = "logo" src = "img/transparent-logo.png" alt = "logo">
+		<div class = "box_b">
+		<button class = "tb_3"><a href = "menu_desktop.html">Menu</a></button>
+		<button class = "tb_4"><a href = "location_desktop.html">Location</a></button>		
+		</div>
+	</div>
+	
+		<div class = "upcoming">
+		<h4 class = "up_text"> Artists</h4>
+		<div class = "upcoming_1">
+			<img class = "wte_1" src = "img/wave_to_earth2.png" alt = "wte_image">
+			<div class = "up_box1">
+				<p>TONIGHT'S SHOW</p>
+				<button class = "tickets"> TICKETS </button>
+			</div>
+		</div>
+				<div class = "upcoming_1">
+			<img class = "wte_1" src = "img/hanroro.jpg" alt = "wte_image">
+			<div class = "up_box2">
+				<p>UPCOMING SHOW</p>
+				<button class = "tickets"> TICKETS </button>
+			</div>
+		</div>
+	</div>
+	
+	<audio id="audio-player" preload="auto" autoplay muted playsinline></audio>
+	<div id = "controls">
+	<div id="song-title"></div>
+	<div class = "controls-row">
+	<button id="prev-btn">⏮</button>
+  	<button id="play-pause-btn"></button>
+  	<div id="timeline">
+    <div id="playhead"></div>
+  	</div>
+  	<div id="time">
+    <span id="current-time">00:00</span> / <span id="duration">00:00</span>
+  	</div>
+ 	 <button id="next-btn">⏭</button>
+		</div>
+
+		</div>
+		
+	
+	<script>
+	const playlist = [
+	  { src: "mp3/Wave_To_Earth.mp3", title: "wave to earth - love" },
+      { src: "mp3/Nerd Connection.mp3", title: "Nerd Connection - Back In Time" },
+      { src: "mp3/Hanroro.mp3", title: "Hanroro - Landing In Love" },
+      { src: "	mp3/Jannabi.mp3", title: "Jannabi - For Lovers Who Hesitate" },
+	  { src: "mp3/YDBB.mp3", title: "YDBB - Isn't That Good" },
+    ]; 
+		
+		const audio = document.getElementById('audio-player');
+		const playPauseBtn = document.getElementById('play-pause-btn');
+		const prevBtn = document.getElementById('prev-btn');
+		const nextBtn = document.getElementById('next-btn');
+		const songTitle = document.getElementById('song-title');
+		const timeline = document.getElementById('timeline');
+		const playhead = document.getElementById('playhead');
+		const currentTimeEl = document.getElementById('current-time');
+		const durationEl = document.getElementById('duration');
+
+		let trackIndex = 0;
+		let isDragging = false;
+		
+	function loadTrack(i) {
+  trackIndex = (i + playlist.length) % playlist.length;
+  audio.src = playlist[trackIndex].src;
+  songTitle.textContent = playlist[trackIndex].title;
+  audio.load();
+}
+loadTrack(0);
+		
+audio.play().then(() => {
+  playPauseBtn.classList.add('pause');
+}).catch(() => {
+  console.log('Autoplay blocked; click play.');
+});
+		
+function togglePlayPause() {
+  if (audio.paused) {
+	audio.muted = false;  
+    audio.play();
+    playPauseBtn.classList.add('pause'); 
+  } else {
+    audio.pause();
+    playPauseBtn.classList.remove('pause'); 
+  }
+}
+
+function playPrev() {
+  loadTrack(trackIndex - 1);
+  audio.play();
+  playPauseBtn.classList.add('pause');
+}
+function playNext() {
+  loadTrack(trackIndex + 1);
+  audio.play();
+  playPauseBtn.classList.add('pause');
+}
+
+function formatTime(sec) {
+  if (!isFinite(sec)) return "00:00";
+  const m = Math.floor(sec / 60);
+  const s = Math.floor(sec % 60);
+  return `${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;
+}
+
+function updateTime() {
+  currentTimeEl.textContent = formatTime(audio.currentTime);
+  durationEl.textContent = formatTime(audio.duration);
+}
+
+function updatePlayhead() {
+  if (isDragging) return;
+  const pct = (audio.currentTime / (audio.duration || 1));
+  const w = timeline.clientWidth;
+  playhead.style.left = Math.min(Math.max(pct * w - playhead.offsetWidth / 2, -3), w - 3) + 'px';
+}
+
+function seekTo(clientX) {
+  const rect = timeline.getBoundingClientRect();
+  const x = Math.min(Math.max(clientX - rect.left, 0), rect.width);
+  const pct = x / rect.width;
+  audio.currentTime = pct * (audio.duration || 0);
+  updateTime();
+  updatePlayhead();
+}
+
+timeline.addEventListener('click', (e) => seekTo(e.clientX));
+playhead.addEventListener('mousedown', (e) => { isDragging = true; e.preventDefault(); });
+window.addEventListener('mousemove', (e) => { if (isDragging) seekTo(e.clientX); });
+window.addEventListener('mouseup', () => { if (isDragging) { isDragging = false; } });
+
+playPauseBtn.addEventListener('click', togglePlayPause);
+prevBtn.addEventListener('click', playPrev);
+nextBtn.addEventListener('click', playNext);
+
+audio.addEventListener('timeupdate', () => { updateTime(); updatePlayhead(); });
+audio.addEventListener('loadedmetadata', () => { updateTime(); updatePlayhead(); });
+audio.addEventListener('ended', playNext); 
+	</script>
+</body>
+</html>
