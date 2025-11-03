@@ -26,7 +26,7 @@
 			<img class = "wte_1" src = "img/wave_to_earth2.png" alt = "wte_image">
 			<div class = "up_box1">
 				<p>TONIGHT'S SHOW</p>
-				<button class = "tickets"> TICKETS </button>
+				<button class = "tickets" onClick="showTicket()"> TICKETS </button>
 			</div>
 		</div>
 	</div>
@@ -168,5 +168,11 @@ audio.addEventListener('timeupdate', () => { updateTime(); updatePlayhead(); });
 audio.addEventListener('loadedmetadata', () => { updateTime(); updatePlayhead(); });
 audio.addEventListener('ended', playNext); 
 	</script>
+	
+	<script>
+			function showTicket() {
+				alert("Tickets All Sold!");
+			}
+		</script>
 </body>
 </html>
