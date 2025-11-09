@@ -146,7 +146,7 @@
 	});		
 </script>
 	
-	<audio id="audio-player" preload="auto" autoplay muted playsinline></audio>
+	<audio id="audio-player" preload="auto" playsinline></audio>
 	<div id = "controls">
 	<div id="song-title"></div>
 	<div class = "controls-row">
@@ -194,11 +194,6 @@
 }
 loadTrack(0);
 		
-audio.play().then(() => {
-  playPauseBtn.classList.add('pause');
-}).catch(() => {
-  console.log('Autoplay blocked; click play.');
-});
 		
 function togglePlayPause() {
   if (audio.paused) {
