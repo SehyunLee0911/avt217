@@ -4,6 +4,7 @@
 
 body {
 	background-color: #001533;	
+	padding-top: 30px;
 	width: 1440px;
 	max-width: 1440px;
 	min-width: 1440px;
@@ -89,6 +90,7 @@ body {
 }
 
 .title {
+	margin-top: -30px;
 	position: fixed;
 	width: 1525px;
 	height: 81px;	
@@ -358,3 +360,73 @@ p {
 	height: 60px;
 	object-fit: cover;
 }
+
+.tab{
+	position: normal;
+	width: 1080px;
+	margin: 90px auto 30px auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #001533;
+}
+
+.tab button{
+	display: block;
+	width: 25%;
+	box-sizing: border-box;
+    background-color: inherit;
+	border: none;
+    outline: none;
+  	cursor: pointer;
+	font-size: 28px;
+	font-family:"Times New Roman";
+	font-style: italic;
+	font-weight: bold;
+	color: #c5a577;
+	text-transform: uppercase;
+}
+
+.dis {
+	font-size: 20px;
+	font-weight: normal;
+	color: #c5a577;
+}
+
+.tabcontent {
+	display: none;
+	width: 1120px;
+	background-color: #001d48;
+	margin: 0 auto;
+	border: 1.5px solid #c5a577;
+	color: white;
+	text-align: left;
+	font-family:"Times New Roman";
+	font-style: italic;
+	font-size: 28px;
+	font-weight: lighter;
+}
+
+.header{
+	display:block;
+	text-align: center;
+	font-family:"Times New Roman";
+	color: #c5a577;
+	font-style: normal;
+	text-transform: uppercase;
+	margin-top: 25px;
+	margin-bottom: 40px;
+}
+
+.m_title, .m_ingredients{
+	display: block;
+	margin-left: 20px;
+	margin-bottom: 10px;
+}
+
+.m_price{
+	display: block;
+	margin-left: 20px;
+	margin-bottom: 60px;
+}
+
