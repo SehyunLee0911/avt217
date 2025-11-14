@@ -321,6 +321,7 @@ p {
 .wn_whole2{
 	column-count: 2;
 	column-gap: 38px;
+	padding-bottom: 160px;
 }
 
 .wn_box3{
@@ -430,3 +431,78 @@ p {
 	margin-bottom: 60px;
 }
 
+.location_box {
+	position: relative;
+	float: left;
+	background-color: #03193b;
+	width: 500px;
+	height: 500px;
+	border: 3px solid #c5a577;
+}
+
+.l_title {
+	display: block;
+	margin-left: 20px;
+	margin-bottom: 5px;
+	font-style: italic;
+	font-family: "Times New Roman";
+	font-size: 40px;
+	letter-spacing: normal;
+}
+
+.l_info {
+	display: block;
+	margin-left: 20px;
+	margin-bottom: 45px;
+	font-style: italic;
+	font-family: "Times New Roman";
+	font-size: 32px;
+	color: white;
+	letter-spacing: normal;
+	margin-right: 20px;
+}
+
+.l_info2 {
+	display: block;
+	margin-left: 20px;
+	margin-bottom: 10px;
+	margin-right: 20px;
+	font-style: italic;
+	font-family: "Times New Roman";
+	font-size: 24px;
+	color: white;
+	letter-spacing: normal;
+}
+
+.FAQ {
+	position: relative;
+	width: 1420px;
+	background-color: #03193b;
+	border: 3px solid #c5a577;
+	margin-bottom: 150px;
+}
+
+.bottom {
+	position: relative;
+	width: 1521px;
+	border-top: 3px solid #c5a577;
+}
+
+.bottom_1 {
+	letter-spacing: normal;
+	font-size: 24px;
+	font-style: italic;
+}
+
+.bottom_2 {
+	letter-spacing: normal;
+	font-size: 18px;
+	font-style: italic;
+}
+
+.logos{
+	position: relative;
+	left: 1275px;
+	bottom: 70px;
+	width: 15%;
+}
