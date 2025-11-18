@@ -167,6 +167,17 @@ body {
 	column-count: 2;
 	column-gap: 400px;
 	padding-bottom: 57px;
+	margin-bottom: 0px;
+}
+
+.upcoming_2 {
+	position: normal;
+	left: 40px;
+	top: 90px;
+	column-count: 2;
+	column-gap: 400px;
+	padding-bottom: 57px;
+	margin-bottom: 100px;
 }
 
 p {
@@ -370,6 +381,7 @@ p {
 	justify-content: center;
 	align-items: center;
 	background-color: #001533;
+	
 }
 
 .tab button{
